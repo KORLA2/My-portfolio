@@ -1,0 +1,88 @@
+.cubespin{
+
+animation:Spin  12s ease-in-out infinite  ;
+transform-style: preserve-3d;
+transform-origin: 100px 100px 0;
+margin-left: calc(50%-100px);
+}
+
+.face{
+
+    position:absolute;
+    overflow :hidden;;
+width:fit-content;
+height:auto;
+backface-visibility: hidden;
+
+border:2px solid rgb(236, 230, 230);
+background: rgba(250, 249, 249, 0.4);
+display:flex;
+justify-content: center;
+background:rgb(42, 212, 190);
+align-items: center;
+box-shadow: 0 0  20px 10px  rgb(214, 60, 21);
+
+}
+
+.face1{
+
+    transform:translateZ(100px)
+}
+
+.face2{
+
+    transform:rotateY(90deg) translateZ(100px);
+}
+.face3{
+    transform:rotateY(90deg) rotateX(90deg) translateZ(100px);
+
+}
+.face4{
+
+    transform:rotateY(180deg) rotateZ(90deg) translateZ(100px);
+
+}
+.face5{
+    transform:rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+
+}
+
+.face6{
+
+    transform:rotateX(-90deg) translateZ(100px);
+
+}
+@keyframes Spin{
+
+0%{
+
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+
+}
+16%{
+
+    transform:rotateY(-90deg) ;
+
+}
+33%{
+    transform:rotateY(-90deg) rotateZ(90deg);
+
+}
+
+50%{
+
+
+    transform: rotateY(-180deg) rotateZ(90deg);
+
+}
+
+66%{
+    transform:  rotateY(-270deg) rotateZ(90deg);
+
+}
+83%{
+    transform: rotateX(90deg) ;
+
+}
+
+}

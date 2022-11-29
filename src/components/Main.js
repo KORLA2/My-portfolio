@@ -21,12 +21,14 @@ const Main = () => {
           Korla Goutham
         </motion.h3>
 
-        <Powers />
+
+        <Powers  main='main'/>
+
         <Link
           target="_blank"
           style={{
             position: "fixed",
-            right: "2rem",
+            right: "15%",
             zIndex: "2",
             textDecoration: "none",
           }}
@@ -41,29 +43,29 @@ const Main = () => {
             <Button className="ball">Contact Me</Button>
           </motion.div>
         </Link>
-
-        <Work to="/MyWork">
-          <motion.div
-            initial={{ y: -200 }}
-            animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Button>My Work</Button>
-          </motion.div>
-        </Work>
-
-        <Blogs to={{ pathname: "/MyBlogs" }}>
-          <motion.div
-            initial={{ y: -200 }}
-            animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Button className="ball">My Blogs</Button>
-          </motion.div>
-        </Blogs>
       </Head>
+
+      <Work to="/MyWork">
+        <motion.div
+          initial={{ y: -200 }}
+          animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <Button>My Work</Button>
+        </motion.div>
+      </Work>
+
+      <Blogs to={{ pathname: "/MyBlogs" }}>
+        <motion.div
+          initial={{ y: -200 }}
+          animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <Button className="ball">My Blogs</Button>
+        </motion.div>
+      </Blogs>
       <div style={{ position: "absolute", bottom: ".5rem", zIndex: "3" }}>
         <Social />
         <Line
@@ -115,6 +117,7 @@ const Main = () => {
         <Skills to="/MySkills">
           <motion.div
             initial={{ y: 200 }}
+            style={{}}
             animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -161,7 +164,7 @@ let Move = styled.div`
   background: ${props=>props.theme.text}
 `
 let Container = styled.div`
-overflow:hidden;
+/* overflow:hidden; */
   background: radial-gradient(circle farthest-side, #fa97a4, #c02c3f);
   .ball {
     transition: all 2s linear;
@@ -175,7 +178,7 @@ overflow:hidden;
   padding: 0.5rem;
   transition: all 2s linear;
 
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 let Head = styled.div`
   /* position:relative; */
@@ -183,11 +186,11 @@ let Head = styled.div`
     color: ${(props) => props.theme.text};
   }
   padding: 2rem;
-  /* border:2px solid red; */
   h3 {
     position: fixed;
     left: 2.5rem;
   }
+ 
   display: flex;
   align-items: center;
   justify-content: center;

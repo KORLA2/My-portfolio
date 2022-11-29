@@ -5,60 +5,135 @@ import  Design  from "@material-ui/icons/DeveloperBoard";
 import Powers from './Power'
 import {motion} from 'framer-motion'
 import Particle from './Particle'
+import './Skills.css'
+import { CircularProgress } from '@material-ui/core';
+import {C ,Dsalgo,Js ,Problem,Git,Linux,react,front,Devops,Aws} from '../images/export'
+import Loader from 'react-loaders';
+import { useState } from 'react';
+import { green } from "@material-ui/core/colors";
+import { useEffect } from 'react';
+
+
 const Skills = () => {
+let [loading,setLoading]=useState(1);
+
+
+useEffect(()=>{
+
+setTimeout(()=>{setLoading(0)},2000)
+
+},[])
+
+console.log(loading)
   return (
-    <div>
+    <Cont>
+      {loading ? (
+        <CircularProgress
+          size={68}
+          sx={{
+            color: green[500],
+            position: "absolute",
+            top: -6,
+            left: -6,
+            zIndex: 1,
+          }}
+        />
+      ) : (
+        ""
+      )}
+
       <Powers />
 
+      <Particle />
 
-    <Particle/>
-      <Main>
-        <Box
-          initial={{ width: 0 }}
-          animate={{ width: "50%" }}
-          transition={{ type: "spring", duration: 0.3 }}
-          style={{ left: "2vw" }}
-        >
-          <Title>
-            <Code />
-            <h2>Competetive Programmer</h2>
-          </Title>
-         
-          <p>I enjoy ,Love Coding</p>
-         
-          <h2>LanguagesKnown</h2>
-         
-          <p>C ,C++,JavaScript</p>
-         
-         <h3>Miscelleneous Skills</h3>
-         <strong>DataStructures And Algorithms </strong>
-<p>Linux Commands,Operating Systems,MySQL,Git GitHub</p>
-        </Box>
+      {!loading ? (
+        <Main>
+          <Box
+            initial={{ width: 0 }}
+            animate={{ width: "50%" }}
+            transition={{ type: "spring", duration: 0.3 }}
+            // style={{ left: "2vw" }}
+            className="box1"
+          >
+            <Title>
+              <Code />
+              <h2>Competetive Programming</h2>
+            </Title>
 
-        <Box
-          initial={{ width: 0 }}
-          animate={{ width: "50%" }}
-          transition={{ type: "spring", duration: 0.3 }}
-          style={{ left: "4vw" }}
-        >
-          <Title>
-            <Design />
-            <h2>FrontendDeveloper</h2>
-          </Title>
+            <h3>I enjoy ,Love Coding</h3>
 
-          <h3>I enjoy bringing new ideas into life</h3>
-          <h2>Skills</h2>
-          <p> HTML,CSS,JS,React,Redux,FireBase,Github, styled-components</p>
-          <h2>Tools</h2>
-          <p>Vs Code,GitHub,Git</p>
-        </Box>
-      </Main>
-    </div>
+            <div className="cube">
+              <div className="cubespin">
+                <div className=" face face1">
+                  <img src={C} alt="" />
+                </div>
+                <div className=" face face2">
+                  <img src={Js} alt="" />
+                </div>
+                <div className=" face face3">
+                  <img src={Dsalgo} alt="" />
+                </div>
+                <div className="face face4">
+                  <img src={Git} alt="" />
+                </div>
+                <div className="face face5">
+                  <img src={Linux} alt="" />
+                </div>
+                <div className="face face6">
+                  <img src={Problem} alt="" />
+                </div>
+              </div>
+            </div>
+          </Box>
+
+          <Box
+            initial={{ width: 0 }}
+            animate={{ width: "50%" }}
+            transition={{ type: "spring", duration: 0.3 }}
+            style={{ left: "4vw" }}
+            className="box2"
+          >
+            <Title>
+              <Design />
+              <h2>FrontendDevelopment</h2>
+            </Title>
+
+            <h3>I enjoy bringing new ideas into life</h3>
+
+            <div className="cube">
+              <div className="cubespin">
+                <div className=" face face1">
+                  <img src={front} alt="" />
+                </div>
+                <div className=" face face2">
+                  <img src={react} alt="" />
+                </div>
+                <div className=" face face3">
+                  <img src={Devops} alt="" />
+                </div>
+                <div className="face face4">
+                  <img src={Aws} alt="" />
+                </div>
+                <div className="face face5">
+                  <img src={Linux} alt="" />
+                </div>
+                <div className="face face6">
+                  <img src={Problem} alt="" />
+                </div>
+              </div>
+            </div>
+          </Box>
+        </Main>
+      ) : (
+        ""
+      )}
+    </Cont>
   );
 }
 
 export default Skills
-let Main = styled.div`
+
+let Cont = styled.div`
   height: 100vh;
   width: 100vw;
   background: radial-gradient(
@@ -66,23 +141,53 @@ let Main = styled.div`
     hsla(111, 22%, 50%, 0.438),
     hsla(165, 53%, 73%, 0.438)
   );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+let Main = styled.div`
+  width: 100vw;
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   transition: all 2s ease;
+  padding: 2vw;
+
 `;
 
 
 let Box = styled(motion.div)`
-  padding: 2vw;
-  position: relative;
-  border: 2px solid black;
-  text-align: center;
-  transition: all 2s ease;
   &:hover {
     background: black;
     color: white;
+    cursor: pointer;
     border: 2px solid white;
+  }
+
+  padding: 2vw;
+
+  border: 2px solid black;
+  text-align: center;
+  transition: all 2s ease;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .cube {
+    width: 100px;
+
+    height: 100px;
+  }
+
+  margin-right: 10px;
+
+  img {
+    height: 100%;
+    width: 100%;
   }
 `;let Title=styled.div`
 

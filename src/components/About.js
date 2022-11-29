@@ -22,9 +22,13 @@ const About = () => {
           <p> Iam Frontend developer and Competetive Programmer  </p>
         <p> I love to Create a simple beautiful websites with greater user experience</p>
         
-<strong> I always  wanted to try new challening projects daily that interest brought me to   Open Source Contributions </strong>
-<p>Till now I only contributed to few  projects as I started lately but this continues</p>
+<strong> I always  wanted to try new challening projects daily that interest brought me to   Open Source  </strong>
 
+<p>Till now I only contributed to few  projects as I started lately but this continues</p>
+<strong>
+Im quite confident curious and working on improving my skills </strong>
+<br/>
+<br/>
 <strong>I love to teach the content I know </strong>
 
 </Box>
@@ -37,7 +41,9 @@ const About = () => {
         >
         <motion.div initial={{opacity:0}}
 animate={{opacity:1 }}
+
 transition={{  duration :1,delay:1.2,}}
+
 >
             <Hero src={Me} />
           </motion.div>

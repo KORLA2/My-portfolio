@@ -7,11 +7,14 @@ import About from "./components/About";
 import Blog from "./components/Blog";
 import Skills from "./components/Skills";
 import Work from './components/Work'
+
 const App = () => {
   return (
     <div>
       <ThemeProvider theme={light}>
+        
         <Router>
+
           <Switch>
             <Route path="/AboutMe" component={About} />
             <Route path="/MySkills" component={Skills} />

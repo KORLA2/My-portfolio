@@ -1240,10 +1240,10 @@
   "resolved" "https://registry.npmjs.org/@csstools/normalize.css/-/normalize.css-12.0.0.tgz"
   "version" "12.0.0"
 
-"@emailjs/browser@^3.6.2":
-  "integrity" "sha512-Swc8w+vwDX4XPy6tPegOFGSwHqNiEmEsIKbtAkqHo2WqnS0ORZUnnuZats2R3XqwfxNQD0F6RwnlVWHIMf6sCQ=="
-  "resolved" "https://registry.npmjs.org/@emailjs/browser/-/browser-3.6.2.tgz"
-  "version" "3.6.2"
+"@emailjs/browser@^3.10.0":
+  "integrity" "sha512-pregUOBkSjjctQoAgn8DcSaeY4ypHjXAJEzWlJysM3RkQXw1ulavfHva3YYeAkxfJ7qbIhpyvRmhyQlgNG4GVg=="
+  "resolved" "https://registry.npmjs.org/@emailjs/browser/-/browser-3.10.0.tgz"
+  "version" "3.10.0"
 
 "@emotion/babel-plugin@^11.7.1":
   "integrity" "sha512-xNQ57njWTFVfPAc3cjfuaPdsgLp5QOSuRsj9MA6ndEhH/AzuZM86qIQzt6rq+aGBwj3n5/TkLmU5lhAfdRmogA=="
@@ -1999,6 +1999,25 @@
   "integrity" "sha512-9FqhNjKQWpQ3fGnSOCovHOm+yhhiorKEqYLAfd525jWavunDJcx8rOW6i6ozAh+FbwcYMkL7b+3j4UR/30MpoQ=="
   "resolved" "https://registry.npmjs.org/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.6.1.tgz"
   "version" "0.6.1"
+
+"@fortawesome/fontawesome-common-types@6.2.1":
+  "integrity" "sha512-Sz07mnQrTekFWLz5BMjOzHl/+NooTdW8F8kDQxjWwbpOJcnoSg4vUDng8d/WR1wOxM0O+CY9Zw0nR054riNYtQ=="
+  "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.2.1.tgz"
+  "version" "6.2.1"
+
+"@fortawesome/free-brands-svg-icons@^6.2.1":
+  "integrity" "sha512-L8l4MfdHPmZlJ72PvzdfwOwbwcCAL0vx48tJRnI6u1PJXh+j2f3yDoKyQgO3qjEsgD5Fr2tQV/cPP8F/k6aUig=="
+  "resolved" "https://registry.npmjs.org/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.2.1.tgz"
+  "version" "6.2.1"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.2.1"
+
+"@fortawesome/free-solid-svg-icons@^6.2.1":
+  "integrity" "sha512-oKuqrP5jbfEPJWTij4sM+/RvgX+RMFwx3QZCZcK9PrBDgxC35zuc7AOFsyMjMd/PIFPeB2JxyqDr5zs/DZFPPw=="
+  "resolved" "https://registry.npmjs.org/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.2.1.tgz"
+  "version" "6.2.1"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.2.1"
 
 "@gar/promisify@^1.0.1":
   "integrity" "sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw=="
@@ -8184,6 +8203,11 @@
   "resolved" "https://registry.npmjs.org/growl/-/growl-1.10.5.tgz"
   "version" "1.10.5"
 
+"gsap-trial@^3.11.3":
+  "integrity" "sha512-d2KL2hKnC6/sTV34TV2EUdpY3kE346FBbKBXDkJnpexSzC5LdtmjTmdLE1uVxxOPVcEcfcS9yxIk4BsEOqg62Q=="
+  "resolved" "https://registry.npmjs.org/gsap-trial/-/gsap-trial-3.11.3.tgz"
+  "version" "3.11.3"
+
 "gtoken@^5.0.4":
   "integrity" "sha512-4d8N6Lk8TEAHl9vVoRVMh9BNOKWVgl2DdNtr3428O75r3QFrF/a5MMu851VmK0AA8+iSvbwRv69k5XnMLURGhg=="
   "resolved" "https://registry.npmjs.org/gtoken/-/gtoken-5.1.0.tgz"
@@ -10168,7 +10192,7 @@
   "version" "3.2.0"
 
 "loaders.css@^0.1.2":
-  "integrity" "sha1-Op+0NybHMzSjgUKvnQYpAZtlh0M="
+  "integrity" "sha512-Rhowlq24ey1VOeor+3wYOt9+MjaxBOJm1u4KlQgNC3+0xJ0LS4wq4iG57D/BPzvuD/7HHDGQOWJ+81oR2EI9bQ=="
   "resolved" "https://registry.npmjs.org/loaders.css/-/loaders.css-0.1.2.tgz"
   "version" "0.1.2"
 

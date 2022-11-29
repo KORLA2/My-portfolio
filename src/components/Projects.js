@@ -57,7 +57,7 @@ host:'https://korlagouthamportfolio.netlify.app'
     desc: "Image was divided to small balls and animates on Hover",
     Techused: "Canvas with Vanilla JavaScript",
     code: "https://github.com/KORLA2/Bitmaps",
-    host: "https://korla2.github.io/Eyes/",
+    host: "https://korla2.github.io/Bitmaps/",
   },
 
   {
@@ -65,7 +65,7 @@ host:'https://korlagouthamportfolio.netlify.app'
     title: "All eyes On me",
     desc: "Different  sized eyes are drawn on canvas",
     Techused: " Canvas with Vanilla JavaScript",
-    host: " https://korla2.github.io/Bitmaps/",
+    host: " https://korla2.github.io/Eyes/",
     code: "https://github.com/KORLA2/Eyes",
   },
 
