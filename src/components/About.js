@@ -93,6 +93,14 @@ position:relative;
 position:relative;
     animation:${float} 4s ease infinite;
   }
+&:hover{
+color:white;
+  border:2px solid white;;
+
+background:black;
+
+}
+
 `;
 let Hero=styled(motion.img)`
 

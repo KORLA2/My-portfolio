@@ -25,17 +25,17 @@ const Main = () => {
         <Powers  main='main'/>
 
         <Link
-          target="_blank"
           style={{
             position: "fixed",
             right: "15%",
             zIndex: "2",
             textDecoration: "none",
           }}
-          to={{ pathname: "mailto:gouthamkorla1023@gmail.com" }}
+          to='/Contact'
         >
           <motion.div
             initial={{ y: -200 }}
+
             animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

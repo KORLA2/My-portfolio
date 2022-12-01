@@ -9,6 +9,7 @@ export { default as Devops } from "./devops.jpg";
 export { default as  Aws} from "./aws.jpg";
 export { default as react } from "./react.png";
 
+export { default as opensrc } from "./opensrc.png";
 
 
 // import * as React from "react";

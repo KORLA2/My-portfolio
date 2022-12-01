@@ -7,7 +7,7 @@ import {motion} from 'framer-motion'
 import Particle from './Particle'
 import './Skills.css'
 import { CircularProgress } from '@material-ui/core';
-import {C ,Dsalgo,Js ,Problem,Git,Linux,react,front,Devops,Aws} from '../images/export'
+import {C ,Dsalgo,Js ,Problem,Git,Linux,react,front,Devops,Aws,opensrc} from '../images/export'
 import Loader from 'react-loaders';
 import { useState } from 'react';
 import { green } from "@material-ui/core/colors";
@@ -77,10 +77,10 @@ console.log(loading)
                   <img src={Git} alt="" />
                 </div>
                 <div className="face face5">
-                  <img src={Linux} alt="" />
+                  <img src={Problem} alt="" />
                 </div>
                 <div className="face face6">
-                  <img src={Problem} alt="" />
+                  <img src={Linux} alt="" />
                 </div>
               </div>
             </div>
@@ -118,7 +118,7 @@ console.log(loading)
                   <img src={Linux} alt="" />
                 </div>
                 <div className="face face6">
-                  <img src={Problem} alt="" />
+                  <img src={opensrc} alt="" />
                 </div>
               </div>
             </div>
@@ -178,9 +178,10 @@ let Box = styled(motion.div)`
   justify-content: center;
   flex-direction: column;
   .cube {
-    width: 100px;
-
-    height: 100px;
+    
+    border:2px  solid red;
+    width:50%;
+    height: 50%;
   }
 
   margin-right: 10px;
@@ -188,6 +189,7 @@ let Box = styled(motion.div)`
   img {
     height: 100%;
     width: 100%;
+    object-fit:contain;
   }
 `;let Title=styled.div`
 
