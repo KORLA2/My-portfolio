@@ -63,7 +63,9 @@ console.log(loading)
             <h3>I enjoy ,Love Coding</h3>
 
             <div className="cube">
+
               <div className="cubespin">
+            
                 <div className=" face face1">
                   <img src={C} alt="" />
                 </div>
@@ -179,9 +181,8 @@ let Box = styled(motion.div)`
   flex-direction: column;
   .cube {
     
-    border:2px  solid red;
-    width:50%;
-    height: 50%;
+    width:150px;
+    height: 150px;
   }
 
   margin-right: 10px;

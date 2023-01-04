@@ -6,11 +6,37 @@ import Social  from './Social'
 import FullLoad from "@material-ui/icons/SportsBaseball";
 import {Link }from 'react-router-dom'
 import Intro from './Intro';
+import Particles from "react-particles";
 import {motion } from 'framer-motion'
+
 const Main = () => {
   let [Click,setClick]=useState(0);
   return (
     <Container click={Click}>
+      {/* <Particles
+    className='particles-js'
+
+     height={275}
+        params={{
+          "particles": {
+            "color": {
+              value: "#000000",
+            },
+            "line_linked": {
+              "color": {
+                "value": "#000000",
+              },
+            },
+            "number": {
+              "value": 50,
+            },
+            "size": {
+              "value": 3,
+            },
+          },
+        }}
+      /> */}
+
       <Head>
         <motion.h3
           initial={{ y: -200 }}
@@ -21,28 +47,28 @@ const Main = () => {
           Korla Goutham
         </motion.h3>
 
+        <Powers main="main" />
 
-        <Powers  main='main'/>
-
-        <Link
+        <a
           style={{
             position: "fixed",
             right: "15%",
             zIndex: "2",
             textDecoration: "none",
           }}
-          to='/Contact'
+          href="mailto:gouthamkorla1023@gmail.com"
         >
           <motion.div
             initial={{ y: -200 }}
-
             animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Button className="ball">Contact Me</Button>
+            <Button variant="contained" color="secondary" className="ball">
+              Contact Me
+            </Button>
           </motion.div>
-        </Link>
+        </a>
       </Head>
 
       <Work to="/MyWork">
@@ -52,7 +78,9 @@ const Main = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Button>My Work</Button>
+          <Button variant="contained" color="secondary">
+            My Work
+          </Button>
         </motion.div>
       </Work>
 
@@ -63,7 +91,9 @@ const Main = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Button className="ball">My Blogs</Button>
+          <Button variant="contained" color="secondary" className="ball">
+            My Blogs
+          </Button>
         </motion.div>
       </Blogs>
       <div style={{ position: "absolute", bottom: ".5rem", zIndex: "3" }}>
@@ -110,7 +140,9 @@ const Main = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Button>About Me</Button>
+            <Button variant="contained" color="secondary">
+              About Me
+            </Button>
           </motion.div>
         </About>
 
@@ -122,7 +154,9 @@ const Main = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Button className="ball">MySkills</Button>
+            <Button variant="contained" color="secondary" className="ball">
+              MySkills
+            </Button>
           </motion.div>
         </Skills>
       </Bottom>
@@ -164,7 +198,10 @@ let Move = styled.div`
   background: ${props=>props.theme.text}
 `
 let Container = styled.div`
-/* overflow:hidden; */
+  /* overflow:hidden; */
+
+   
+
   background: radial-gradient(circle farthest-side, #fa97a4, #c02c3f);
   .ball {
     transition: all 2s linear;

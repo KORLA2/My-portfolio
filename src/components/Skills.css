@@ -2,24 +2,29 @@
 
 animation:Spin  12s ease-in-out infinite  ;
 transform-style: preserve-3d;
-/* transform-origin:; */
+transition:2s;
 margin-left: calc(50%-100px);
+width:100%;
+height:100%;
+
 }
 
 .face{
 
     position:absolute;
     overflow :hidden;;
-width:auto;
+transform-origin:center;
 
-height:auto;
-backface-visibility: hidden;
+background-position: center;
+background-size:contain;
+/* backface-visibility: hidden; */
 
 border:2px solid rgb(236, 230, 230);
-background: rgba(238, 16, 16, 0.4);
+
+/* background: rgba(238, 16, 16, 0.4); */
 display:flex;
 justify-content: center;
-background:rgb(42, 212, 190);
+background:rgb(250, 252, 251);
 align-items: center;
 box-shadow: 0 0  20px 10px  rgb(214, 60, 21);
 
@@ -27,62 +32,69 @@ box-shadow: 0 0  20px 10px  rgb(214, 60, 21);
 
 .face1{
 
-    transform:translateZ(100px)
+   transform: rotateY(0deg) translateZ(7.5em);
+
 }
 
 .face2{
 
-    transform:rotateY(90deg) translateZ(100px);
+     transform: rotateY(90deg) translateZ(7.5em);
+
 }
 .face3{
-    transform:rotateY(90deg) rotateX(90deg) translateZ(100px);
+
+  transform: rotateY(180deg) translateZ(7.5em);
 
 }
 .face4{
 
-    transform:rotateY(180deg) rotateZ(90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(7.5em)
 
 }
 .face5{
-    transform:rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+     transform: rotateX(-90deg) translateZ(7.5em);
 
 }
 
 .face6{
 
-    transform:rotateX(-90deg) translateZ(100px);
+    transform: rotateX(90deg) translateZ(7.5em);
 
 }
+
 @keyframes Spin{
 
 0%{
-
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+ transform: rotateX(-15deg) rotateY(0deg);
 
 }
 16%{
-
-    transform:rotateY(-90deg) ;
+    transform: rotateX(-15deg) rotateY(90deg);
 
 }
 33%{
-    transform:rotateY(-90deg) rotateZ(90deg);
-
+   transform: rotateX(-15deg) rotateY(180deg);
 }
+
 
 50%{
-
-
-    transform: rotateY(-180deg) rotateZ(90deg);
-
+    transform: rotateX(-15deg) rotateY(270deg);
 }
 
-66%{
-    transform:  rotateY(-270deg) rotateZ(90deg);
 
-}
+
 83%{
-    transform: rotateX(90deg) ;
+     transform: rotateX(-105deg) rotateY(0deg);
+
+}
+66%{
+
+    transform: rotateX(75deg) rotateY(0deg);
+
+}
+100%{
+
+ transform: rotateX(-15deg) rotateY(0deg);
 
 }
 
