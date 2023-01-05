@@ -11,9 +11,9 @@ const BlogComponent = ({blog}) => {
         <CardActionArea>
           <CardMedia
             component="img"
-            height="140"
+            height="auto"
             image={blog.src}
-            alt="green iguana"
+            alt="Connect to  Internet"
           />
         </CardActionArea>
 

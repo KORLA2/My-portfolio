@@ -13,51 +13,169 @@ const Main = () => {
   let [Click,setClick]=useState(0);
   return (
     <Container click={Click}>
-      {/* <Particles
-    className='particles-js'
-
-     height={275}
+      <Particles
+        className="particles-js"
+        height={275}
         params={{
-          "particles": {
-            "color": {
-              value: "#000000",
-            },
-            "line_linked": {
-              "color": {
-                "value": "#000000",
+          particles: {
+            number: {
+              value: 400,
+              density: {
+                enable: true,
+                value_area: 800,
               },
             },
-            "number": {
-              "value": 50,
+            color: {
+              value: "#fff",
             },
-            "size": {
-              "value": 3,
+            shape: {
+              type: "circle",
+              stroke: {
+                width: 0,
+                color: "#000000",
+              },
+              polygon: {
+                nb_sides: 5,
+              },
+              image: {
+                src: "img/github.svg",
+                width: 100,
+                height: 100,
+              },
+            },
+            opacity: {
+              value: 0.5,
+              random: true,
+              anim: {
+                enable: false,
+                speed: 1,
+                opacity_min: 0.1,
+                sync: false,
+              },
+            },
+            size: {
+              value: 10,
+              random: true,
+              anim: {
+                enable: false,
+                speed: 40,
+                size_min: 0.1,
+                sync: false,
+              },
+            },
+            line_linked: {
+              enable: false,
+              distance: 500,
+              color: "#ffffff",
+              opacity: 0.4,
+              width: 2,
+            },
+            move: {
+              enable: true,
+              speed: 6,
+              direction: "bottom",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200,
+              },
             },
           },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "bubble",
+              },
+              onclick: {
+                enable: true,
+                mode: "repulse",
+              },
+              resize: true,
+            },
+            modes: {
+              grab: {
+                distance: 400,
+                line_linked: {
+                  opacity: 0.5,
+                },
+              },
+              bubble: {
+                distance: 400,
+                size: 4,
+                duration: 0.3,
+                opacity: 1,
+                speed: 3,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+              push: {
+                particles_nb: 4,
+              },
+              remove: {
+                particles_nb: 2,
+              },
+            },
+          },
+          retina_detect: true,
         }}
-      /> */}
+      />
 
-      <Head>
-        <motion.h3
-          initial={{ y: -200 }}
-          animate={{ y: 0, transition: { type: "spring", duration: 1 } }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          Korla Goutham
-        </motion.h3>
+        <Head>
+          <motion.h3
+            initial={{ y: -200 }}
+            animate={{ y: 0, transition: { type: "spring", duration: 1 } }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Korla Goutham
+          </motion.h3>
 
-        <Powers main="main" />
+          <Powers main="main" />
 
-        <a
-          style={{
-            position: "fixed",
-            right: "15%",
-            zIndex: "2",
-            textDecoration: "none",
-          }}
-          href="mailto:gouthamkorla1023@gmail.com"
-        >
+          <a
+            style={{
+              position: "fixed",
+              right: "15%",
+              zIndex: "2",
+              textDecoration: "none",
+            }}
+            href="mailto:gouthamkorla1023@gmail.com"
+          >
+            <motion.div
+              initial={{ y: -200 }}
+              animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Button variant="contained" color="secondary" className="ball">
+                Contact Me
+              </Button>
+            </motion.div>
+          </a>
+        </Head>
+
+        <Work to="/MyWork">
+          <motion.div
+            initial={{ y: -200 }}
+            animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <Button variant="contained" color="secondary">
+              My Work
+            </Button>
+          </motion.div>
+        </Work>
+
+        <Blogs to={{ pathname: "/MyBlogs" }}>
           <motion.div
             initial={{ y: -200 }}
             animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
@@ -65,103 +183,83 @@ const Main = () => {
             whileTap={{ scale: 0.9 }}
           >
             <Button variant="contained" color="secondary" className="ball">
-              Contact Me
+              My Blogs
             </Button>
           </motion.div>
-        </a>
-      </Head>
-
-      <Work to="/MyWork">
-        <motion.div
-          initial={{ y: -200 }}
-          animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <Button variant="contained" color="secondary">
-            My Work
-          </Button>
-        </motion.div>
-      </Work>
-
-      <Blogs to={{ pathname: "/MyBlogs" }}>
-        <motion.div
-          initial={{ y: -200 }}
-          animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <Button variant="contained" color="secondary" className="ball">
-            My Blogs
-          </Button>
-        </motion.div>
-      </Blogs>
-      <div style={{ position: "absolute", bottom: ".5rem", zIndex: "3" }}>
-        <Social />
-        <Line
-          initial={{ height: "0rem" }}
-          animate={{
-            height: "8rem",
-            transition: { type: "tween", duration: 1.3 },
-          }}
-        />
-      </div>
-      <Move click={Click} />
-      <Middle click={Click}>
-        {/* <Link> */}
-        <motion.div
-          initial={{ y: -200 }}
-          animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
-        >
-          <FullLoad
-            onClick={() => {
-              setClick(!Click);
+        </Blogs>
+        <div style={{ position: "absolute", bottom: ".5rem", zIndex: "3" }}>
+          <Social />
+          <Line
+            initial={{ height: "0rem" }}
+            animate={{
+              height: "8rem",
+              transition: { type: "tween", duration: 1.3 },
             }}
-            className="ball"
-            style={{ transform: "scale(5)", cursor: "pointer", border: "none" }}
           />
-        </motion.div>
-        {!Click ? (
-          <motion.h3
-            initial={{ y: 200 }}
-            animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
-          >
-            Click on the ball
-          </motion.h3>
-        ) : null}
-
-        {/* </Link> */}
-      </Middle>
-      <Bottom>
-        <About to="/AboutMe">
+        </div>
+        <Move click={Click} />
+        <Middle click={Click}>
+          {/* <Link> */}
           <motion.div
-            initial={{ y: 200 }}
+            initial={{ y: -200 }}
             animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
           >
-            <Button variant="contained" color="secondary">
-              About Me
-            </Button>
+            <FullLoad
+              onClick={() => {
+                setClick(!Click);
+              }}
+              className="ball"
+              style={{
+                transform: "scale(5)",
+                cursor: "pointer",
+                border: "none",
+              }}
+            />
           </motion.div>
-        </About>
+          {!Click ? (
+            <motion.h3
+              initial={{ y: 200 }}
+              animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
+            >
+              Click on the ball
+            </motion.h3>
+          ) : null}
 
-        <Skills to="/MySkills">
-          <motion.div
-            initial={{ y: 200 }}
-            style={{}}
-            animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Button variant="contained" color="secondary" className="ball">
-              MySkills
-            </Button>
-          </motion.div>
-        </Skills>
-      </Bottom>
+          {/* </Link> */}
+        </Middle>
+        <Bottom>
+          <About to="/AboutMe">
+            <motion.div
+              initial={{ y: 200 }}
+              animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Button variant="contained" color="secondary">
+                About Me
+              </Button>
+            </motion.div>
+          </About>
 
-      {!Click ? null : <Intro />}
+          <Skills to="/MySkills">
+            <motion.div
+              initial={{ y: 200 }}
+              style={{}}
+              animate={{ y: 0, transition: { type: "spring", duration: 1.3 } }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Button variant="contained" color="secondary" className="ball">
+                MySkills
+              
+              </Button>
+
+            </motion.div>
+          </Skills>
+        </Bottom>
+
+        {!Click ? null : <Intro />}
+
     </Container>
   );
 }
@@ -191,18 +289,20 @@ let Move = styled.div`
 
   width: ${(props) => (props.click ? "50%" : "0%")};
   height: 100%;
+
   left: 60%;
+
   top: 0%;
+
   transition: height .5s ease-in, width 1.5s ease-out;
   bottom: 0%;
   background: ${props=>props.theme.text}
 `
 let Container = styled.div`
-  /* overflow:hidden; */
-
-   
-
+position:relative;
   background: radial-gradient(circle farthest-side, #fa97a4, #c02c3f);
+
+
   .ball {
     transition: all 2s linear;
     border: ${(props) => (props.click ? "2px solid white" : "none")};

@@ -24,7 +24,7 @@ transition={ {type:'spring',duration:.3  }}
 </h3>
 <h4>
 
-Iam a competetive Programmer and a Frontend Developer
+Iam a competetive Programmer and a Frontend Developer currently learning Devops And AWS
 </h4>
 
 </InnerBox>
